@@ -20,6 +20,7 @@
       <module fileurl="file://$PROJECT_DIR$/app-messaging-redis/my-messaging-redis.iml" filepath="$PROJECT_DIR$/app-messaging-redis/my-messaging-redis.iml" />
       <module fileurl="file://$PROJECT_DIR$/app-websocket/my-messaging-stomp-websocket.iml" filepath="$PROJECT_DIR$/app-websocket/my-messaging-stomp-websocket.iml" />
       <module fileurl="file://$PROJECT_DIR$/app-data-mysql/my-mysql-data.iml" filepath="$PROJECT_DIR$/app-data-mysql/my-mysql-data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-data-oracle/my-oracle-data.iml" filepath="$PROJECT_DIR$/app-data-oracle/my-oracle-data.iml" />
       <module fileurl="file://$PROJECT_DIR$/app-data-jdbc/my-relational-data-access.iml" filepath="$PROJECT_DIR$/app-data-jdbc/my-relational-data-access.iml" />
       <module fileurl="file://$PROJECT_DIR$/app-scheduling-tasks/my-scheduling-tasks.iml" filepath="$PROJECT_DIR$/app-scheduling-tasks/my-scheduling-tasks.iml" />
       <module fileurl="file://$PROJECT_DIR$/app-securing-web/my-securing-web.iml" filepath="$PROJECT_DIR$/app-securing-web/my-securing-web.iml" />

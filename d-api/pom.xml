@@ -22,6 +22,7 @@
         <module>app-data-neo4j</module>
         <module>app-caching</module>
         <module>app-data-mysql</module>
+        <module>app-data-oracle</module>
         <module>app-validatin-form-input</module>
         <module>app-uploading-files</module>
         <module>app-batch-processing</module>
