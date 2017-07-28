@@ -1,6 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app-batch-processing" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app-caching" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app-consuming-rest" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app-data-jdbc" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app-data-jpa" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app-data-mongodb" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app-data-mysql" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app-data-neo4j" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app-data-rest" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app-docker" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app-managing-transcations" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app-messaging-rabbitmq" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app-messaging-redis" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app-neo4j-data-rest" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app-scheduling-tasks" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app-securing-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app-uploading-files" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app-validatin-form-input" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app-web-content" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app-websocket" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/application" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/library" charset="UTF-8" />
   </component>

@@ -3,14 +3,34 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.springframework</groupId>
-    <artifactId>gs-multi-module</artifactId>
+    <groupId>com.supermy</groupId>
+    <artifactId>my-multi-module</artifactId>
     <version>0.1.0</version>
     <packaging>pom</packaging>
 
     <modules>
         <module>library</module>
         <module>application</module>
+        <module>app-data-rest</module>
+        <module>app-data-jpa</module>
+        <module>app-web-content</module>
+        <module>app-data-mongodb</module>
+        <module>app-scheduling-tasks</module>
+        <module>app-data-jdbc</module>
+        <module>app-messaging-rabbitmq</module>
+        <module>app-messaging-redis</module>
+        <module>app-data-neo4j</module>
+        <module>app-caching</module>
+        <module>app-data-mysql</module>
+        <module>app-validatin-form-input</module>
+        <module>app-uploading-files</module>
+        <module>app-batch-processing</module>
+        <module>app-neo4j-data-rest</module>
+        <module>app-docker</module>
+        <module>app-consuming-rest</module>
+        <module>app-securing-web</module>
+        <module>app-managing-transcations</module>
+        <module>app-websocket</module>
     </modules>
 
 </project>

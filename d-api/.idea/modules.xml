@@ -2,9 +2,29 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/app-data-rest/gs-accessing-data-rest.iml" filepath="$PROJECT_DIR$/app-data-rest/gs-accessing-data-rest.iml" />
       <module fileurl="file://$PROJECT_DIR$/gs-multi-module.iml" filepath="$PROJECT_DIR$/gs-multi-module.iml" />
       <module fileurl="file://$PROJECT_DIR$/application/gs-multi-module-application.iml" filepath="$PROJECT_DIR$/application/gs-multi-module-application.iml" />
       <module fileurl="file://$PROJECT_DIR$/library/gs-multi-module-library.iml" filepath="$PROJECT_DIR$/library/gs-multi-module-library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-web-content/gs-serving-web-content.iml" filepath="$PROJECT_DIR$/app-web-content/gs-serving-web-content.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-validatin-form-input/gs-validating-form-input.iml" filepath="$PROJECT_DIR$/app-validatin-form-input/gs-validating-form-input.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-data-jpa/my-accessing-data-jpa.iml" filepath="$PROJECT_DIR$/app-data-jpa/my-accessing-data-jpa.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-data-mongodb/my-accessing-data-mongodb.iml" filepath="$PROJECT_DIR$/app-data-mongodb/my-accessing-data-mongodb.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-data-neo4j/my-accessing-data-neo4j.iml" filepath="$PROJECT_DIR$/app-data-neo4j/my-accessing-data-neo4j.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-neo4j-data-rest/my-accessing-neo4j-data-rest.iml" filepath="$PROJECT_DIR$/app-neo4j-data-rest/my-accessing-neo4j-data-rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-batch-processing/my-batch-processing.iml" filepath="$PROJECT_DIR$/app-batch-processing/my-batch-processing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-caching/my-caching.iml" filepath="$PROJECT_DIR$/app-caching/my-caching.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-consuming-rest/my-consuming-rest.iml" filepath="$PROJECT_DIR$/app-consuming-rest/my-consuming-rest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-managing-transcations/my-managing-transactions.iml" filepath="$PROJECT_DIR$/app-managing-transcations/my-managing-transactions.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-messaging-rabbitmq/my-messaging-rabbitmq.iml" filepath="$PROJECT_DIR$/app-messaging-rabbitmq/my-messaging-rabbitmq.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-messaging-redis/my-messaging-redis.iml" filepath="$PROJECT_DIR$/app-messaging-redis/my-messaging-redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-websocket/my-messaging-stomp-websocket.iml" filepath="$PROJECT_DIR$/app-websocket/my-messaging-stomp-websocket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-data-mysql/my-mysql-data.iml" filepath="$PROJECT_DIR$/app-data-mysql/my-mysql-data.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-data-jdbc/my-relational-data-access.iml" filepath="$PROJECT_DIR$/app-data-jdbc/my-relational-data-access.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-scheduling-tasks/my-scheduling-tasks.iml" filepath="$PROJECT_DIR$/app-scheduling-tasks/my-scheduling-tasks.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-securing-web/my-securing-web.iml" filepath="$PROJECT_DIR$/app-securing-web/my-securing-web.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-docker/my-spring-boot-docker.iml" filepath="$PROJECT_DIR$/app-docker/my-spring-boot-docker.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app-uploading-files/my-uploading-files.iml" filepath="$PROJECT_DIR$/app-uploading-files/my-uploading-files.iml" />
     </modules>
   </component>
 </project>

@@ -2,18 +2,58 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
-      <profile name="Annotation profile for gs-multi-module" enabled="true">
-        <sourceOutputDir name="../target/generated-sources/annotations" />
-        <sourceTestOutputDir name="../target/generated-test-sources/test-annotations" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="gs-accessing-data-rest" />
         <module name="gs-multi-module-application" />
         <module name="gs-multi-module-library" />
+        <module name="gs-serving-web-content" />
+        <module name="gs-validating-form-input" />
+        <module name="my-accessing-data-jpa" />
+        <module name="my-accessing-data-mongodb" />
+        <module name="my-accessing-data-neo4j" />
+        <module name="my-accessing-neo4j-data-rest" />
+        <module name="my-batch-processing" />
+        <module name="my-caching" />
+        <module name="my-consuming-rest" />
+        <module name="my-managing-transactions" />
+        <module name="my-messaging-rabbitmq" />
+        <module name="my-messaging-redis" />
+        <module name="my-messaging-stomp-websocket" />
+        <module name="my-mysql-data" />
+        <module name="my-relational-data-access" />
+        <module name="my-scheduling-tasks" />
+        <module name="my-securing-web" />
+        <module name="my-spring-boot-docker" />
+        <module name="my-uploading-files" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="gs-accessing-data-rest" target="1.8" />
       <module name="gs-multi-module" target="1.5" />
-      <module name="gs-multi-module-application" target="1.5" />
-      <module name="gs-multi-module-library" target="1.5" />
+      <module name="gs-multi-module-application" target="1.8" />
+      <module name="gs-multi-module-library" target="1.8" />
+      <module name="gs-serving-web-content" target="1.8" />
+      <module name="gs-validating-form-input" target="1.8" />
+      <module name="my-accessing-data-jpa" target="1.8" />
+      <module name="my-accessing-data-mongodb" target="1.8" />
+      <module name="my-accessing-data-neo4j" target="1.8" />
+      <module name="my-accessing-neo4j-data-rest" target="1.8" />
+      <module name="my-batch-processing" target="1.8" />
+      <module name="my-caching" target="1.8" />
+      <module name="my-consuming-rest" target="1.8" />
+      <module name="my-managing-transactions" target="1.8" />
+      <module name="my-messaging-rabbitmq" target="1.8" />
+      <module name="my-messaging-redis" target="1.8" />
+      <module name="my-messaging-stomp-websocket" target="1.8" />
+      <module name="my-mysql-data" target="1.8" />
+      <module name="my-relational-data-access" target="1.8" />
+      <module name="my-scheduling-tasks" target="1.8" />
+      <module name="my-securing-web" target="1.8" />
+      <module name="my-spring-boot-docker" target="1.8" />
+      <module name="my-uploading-files" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
