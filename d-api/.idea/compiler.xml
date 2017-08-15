@@ -14,21 +14,27 @@
         <module name="my-accessing-data-jpa" />
         <module name="my-accessing-data-mongodb" />
         <module name="my-accessing-data-neo4j" />
+        <module name="my-accessing-data-rest" />
         <module name="my-accessing-neo4j-data-rest" />
         <module name="my-batch-processing" />
         <module name="my-caching" />
         <module name="my-consuming-rest" />
+        <module name="my-influxdb-data-access" />
         <module name="my-managing-transactions" />
         <module name="my-messaging-rabbitmq" />
         <module name="my-messaging-redis" />
         <module name="my-messaging-stomp-websocket" />
+        <module name="my-multi-module-application" />
+        <module name="my-multi-module-library" />
         <module name="my-mysql-data" />
         <module name="my-oracle-data" />
         <module name="my-relational-data-access" />
         <module name="my-scheduling-tasks" />
         <module name="my-securing-web" />
+        <module name="my-serving-web-content" />
         <module name="my-spring-boot-docker" />
         <module name="my-uploading-files" />
+        <module name="my-validating-form-input" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -41,21 +47,28 @@
       <module name="my-accessing-data-jpa" target="1.8" />
       <module name="my-accessing-data-mongodb" target="1.8" />
       <module name="my-accessing-data-neo4j" target="1.8" />
+      <module name="my-accessing-data-rest" target="1.8" />
       <module name="my-accessing-neo4j-data-rest" target="1.8" />
       <module name="my-batch-processing" target="1.8" />
       <module name="my-caching" target="1.8" />
       <module name="my-consuming-rest" target="1.8" />
+      <module name="my-influxdb-data-access" target="1.8" />
       <module name="my-managing-transactions" target="1.8" />
       <module name="my-messaging-rabbitmq" target="1.8" />
       <module name="my-messaging-redis" target="1.8" />
       <module name="my-messaging-stomp-websocket" target="1.8" />
+      <module name="my-multi-module" target="1.5" />
+      <module name="my-multi-module-application" target="1.8" />
+      <module name="my-multi-module-library" target="1.8" />
       <module name="my-mysql-data" target="1.8" />
       <module name="my-oracle-data" target="1.8" />
       <module name="my-relational-data-access" target="1.8" />
       <module name="my-scheduling-tasks" target="1.8" />
       <module name="my-securing-web" target="1.8" />
+      <module name="my-serving-web-content" target="1.8" />
       <module name="my-spring-boot-docker" target="1.8" />
       <module name="my-uploading-files" target="1.8" />
+      <module name="my-validating-form-input" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

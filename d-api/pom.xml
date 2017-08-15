@@ -32,6 +32,9 @@
         <module>app-securing-web</module>
         <module>app-managing-transcations</module>
         <module>app-websocket</module>
+        <module>app-data-influxdb</module>
+
+
     </modules>
 
 </project>
