@@ -17,7 +17,7 @@ public class Receiver {
     }
 
     public void receiveMessage(String message) {
-        LOGGER.info("Received <" + message + ">");
+        LOGGER.info("收到 <" + message + ">");
         latch.countDown();
     }
 }

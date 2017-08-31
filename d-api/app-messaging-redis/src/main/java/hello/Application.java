@@ -9,10 +9,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
+import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.data.redis.listener.PatternTopic;
 import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 import org.springframework.data.redis.listener.adapter.MessageListenerAdapter;
+import redis.clients.jedis.JedisPoolConfig;
 
 @SpringBootApplication
 public class Application {
@@ -50,15 +52,34 @@ public class Application {
 		return new StringRedisTemplate(connectionFactory);
 	}
 
+//	@Bean
+//	public RedisConnectionFactory jedisConnectionFactory() {
+//		JedisPoolConfig poolConfig = new JedisPoolConfig();
+//		poolConfig.setMaxTotal(5);
+//		poolConfig.setTestOnBorrow(true);
+//		poolConfig.setTestOnReturn(true);
+//		JedisConnectionFactory ob = new JedisConnectionFactory(poolConfig);
+//		ob.setUsePool(true);
+//		ob.setHostName("127.0.0.1");
+//		//ob.setHostName("myredis_redis_1");//myredis is docker link-name
+//		ob.setPort(6379);
+//		return ob;
+//	}
+
+
 	public static void main(String[] args) throws InterruptedException {
 
 		ApplicationContext ctx = SpringApplication.run(Application.class, args);
 
 		StringRedisTemplate template = ctx.getBean(StringRedisTemplate.class);
+
+		System.out.println(template.getConnectionFactory());
+
+
 		CountDownLatch latch = ctx.getBean(CountDownLatch.class);
 
-		LOGGER.info("Sending message...");
-		template.convertAndSend("chat", "Hello from Redis!");
+		LOGGER.info("发送消息...");
+		template.convertAndSend("chat", "你好，Redis!");
 
 		latch.await();
 
