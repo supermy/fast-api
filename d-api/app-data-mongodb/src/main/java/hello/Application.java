@@ -1,13 +1,16 @@
 package hello;
 
+import com.google.gson.Gson;
 import com.mongodb.BasicDBObject;
 import com.mongodb.DBObject;
+import org.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.web.client.RestTemplate;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -24,6 +27,10 @@ public class Application implements CommandLineRunner {
 	private MongoTemplate mongoTemplate;
 	@Resource
 	private MongoTemplate mongoTemplate2;
+
+
+	@Autowired
+	RestTemplate restTemplate;
 
 
 	public static void main(String[] args) {
@@ -68,6 +75,14 @@ public class Application implements CommandLineRunner {
 		mongoTemplate.getCollection("tC").insert(list);
 		mongoTemplate2.getCollection("tC").insert(list);
 
+
+		///Spring RestTemplate, 使用java访问URL更加优雅，更加方便。
+
+		String url = "http://127.0.0.1:8080/customer";
+//		Gson json = restTemplate.getForEntity(url, Gson.class).getBody();
+		BasicDBObject json = restTemplate.getForEntity(url, BasicDBObject.class).getBody();
+
+		System.out.println(json);
 	}
 
 }
