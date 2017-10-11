@@ -266,6 +266,11 @@ public class BaiduPOIService {
         //        JsonElement cityListByBox = getJsonPoiByBaiduApi(byBoxApi,"results");
 
 
+        String[] aks={"Od4CNu4ENKpsQWg81i8E2zFg7ZZupyit","I52qLxClvwRlDm2GNnfxHrbwf9VD35SF"};
+
+
+//        String ak=aks[random(0,aks.length)];
+
         //城市列表
         String citylist = "http://webmap0.map.bdstatic.com/wolfman/static/common/pkg/SelCity-pkg_043d2cd.js";
         JsonElement cityList = getJsonPoiByBaiduApi(citylist, null, "=[{", "1", "}]}", "2");
@@ -282,12 +287,12 @@ public class BaiduPOIService {
                     ) {
 
                 if (obj.getAsJsonObject().get("type").getAsString().equals("C")) {
-                    log.debug(" obj:{} ;type: {} ; == {}", obj, obj.getAsJsonObject().get("type"), obj.getAsJsonObject().get("type").getAsString().equals("C"));
-                    log.debug("  {}", obj.getAsJsonObject().get("name").getAsString());
+//                    log.debug(" obj:{} ;type: {} ; == {}", obj, obj.getAsJsonObject().get("type"), obj.getAsJsonObject().get("type").getAsString().equals("C"));
+//                    log.debug("  {}", obj.getAsJsonObject().get("name").getAsString());
 
                     //分页查询
                     for (int i = 0; i < 20; i++) {
-                        String byCityApi = String.format("http://api.map.baidu.com/place/v2/search?query=%s&page_size=20&page_num=%d&scope=1&region=%s&output=json&ak=%s", classObj, i, obj.getAsJsonObject().get("name").getAsString(), "2GeRN9G0VqDwhVn7ZiBBbuQSxcfUi5jv");
+                        String byCityApi = String.format("http://api.map.baidu.com/place/v2/search?query=%s&page_size=20&page_num=%d&scope=1&region=%s&output=json&ak=%s", classObj, i, obj.getAsJsonObject().get("name").getAsString(), aks[random(0,aks.length)]);
                         //POI 列表 按行政区域
                         JsonElement cityListByRegion = getJsonPoiByBaiduApi(byCityApi, "results");
                         log.debug("{}",cityListByRegion );
@@ -296,7 +301,7 @@ public class BaiduPOIService {
                         for (JsonElement byDatail : cityListByRegion.getAsJsonArray()
                                 ) {
                             //POI 详情
-                            String byDatailUrl = String.format("http://api.map.baidu.com/place/v2/detail?uid=%s&output=json&scope=2&ak=%s", byDatail.getAsJsonObject().get("uid").getAsString(), "2GeRN9G0VqDwhVn7ZiBBbuQSxcfUi5jv");
+                            String byDatailUrl = String.format("http://api.map.baidu.com/place/v2/detail?uid=%s&output=json&scope=2&ak=%s", byDatail.getAsJsonObject().get("uid").getAsString(), aks[random(0,aks.length)]);
                             JsonElement poiDetailByUidApi = getJsonPoiByBaiduApi(byDatailUrl, "result");
                             log.debug("详单数据：{}", poiDetailByUidApi);
                         }
@@ -354,15 +359,20 @@ public class BaiduPOIService {
             if (StringUtils.isNotEmpty(json2)) {
                 //数据持久化到 Rocksdb
                 jsonElements = JsonUtils.toJson(json2); //相当于json格式验证
-                if(jsonElements.getAsJsonObject().get("status").getAsString().equalsIgnoreCase("401")){
-                    log.debug("$$$$$$ 抓取数据错误 {}",jsonElements.getAsJsonObject().get("message").getAsString());
-                    try {
-                        Thread.sleep(10000);
-                        return new JsonArray();
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
+
+                if (substring.length <=0 ) {  //预处理的数据是没有 status
+                    String status = jsonElements.getAsJsonObject().get("status").getAsString();
+                    if(status.equalsIgnoreCase("401") || status.equalsIgnoreCase("302") ){
+                        log.debug("$$$$$$ 抓取数据错误原因： {}",jsonElements.getAsJsonObject().get("message").getAsString());
+                        try {
+                            Thread.sleep(10000);
+                            return new JsonArray();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
                     }
                 }
+
                 if (StringUtils.isNotEmpty(dataname)) {
                     jsonElements = jsonElements.getAsJsonObject().get(dataname);
                 }

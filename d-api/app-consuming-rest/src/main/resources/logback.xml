@@ -38,6 +38,9 @@
 
 	<logger name="hello" level="DEBUG"/>
 
+	<logger name="net.sourceforge.tess4j" level="DEBUG"/>
+
+
 	<!--WRAN-->
 	<root level="ERROR">
 		<appender-ref ref="console" />
