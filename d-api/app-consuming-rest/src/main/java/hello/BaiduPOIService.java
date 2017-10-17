@@ -71,6 +71,10 @@ public class BaiduPOIService {
         return exists;
     }
 
+
+
+
+
     /**
      * 获取图吧的数据
      *
@@ -83,11 +87,11 @@ public class BaiduPOIService {
         List<Map<String, String>> list = new ArrayList<Map<String, String>>();
 
 
-        log.debug("{}", String.format("city num : %d", cityList.keySet().size()));
+        log.debug("{}", String.format("城市数量 : %d", cityList.keySet().size()));
 
         for (String cityUrl : cityList.keySet()) {
 
-            log.debug("{}", cityUrl);
+            log.debug("城市：{}", cityUrl);
 
             //某个城市分类列表
             Map<String, String> classList = getCommonByUrlXPath(cityUrl, "//div[@class='isortBox']/a");
@@ -98,6 +102,7 @@ public class BaiduPOIService {
 //            }else
 //                   log.debug("{}",String.format("city num : %d", classList.keySet().size()));
 
+            log.debug("{}", String.format("分类数量 : %d", classList.keySet().size()));
 
             for (String classUrl : classList.keySet()) {
 

@@ -135,6 +135,7 @@ public class ApplicationTest {
 	@Test
 	public void getFullItemList() throws IOException, RocksDBException {
 //		HttpUtils.proxy=true;
+//		HttpUtils.javaScriptEnabled=true;
 		bps.getMapBarPoi();
 		db.close();
 	}

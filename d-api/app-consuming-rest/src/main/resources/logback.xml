@@ -37,6 +37,7 @@
 	<logger name="jdbc.sqltiming" level="DEBUG"/>
 
 	<logger name="hello" level="DEBUG"/>
+	<logger name="ocr" level="DEBUG"/>
 
 	<logger name="net.sourceforge.tess4j" level="DEBUG"/>
 

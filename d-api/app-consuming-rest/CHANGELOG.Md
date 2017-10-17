@@ -1,3 +1,20 @@
+### 20171016
+
+```aidl
+    抓取数据时候进行验证码识别；
+
+```
+
+### 20171013
+
+```aidl
+    Test4j 在 MacOs JNI 调用出错，语言包大于20M 的情况；
+    现改用 CMD 方式调用；
+    
+    运行时候 vm options 配置：
+    -Djava.library.path=app-consuming-rest/libs
+    
+```    
 
 ### 20171011
     
@@ -43,7 +60,35 @@ Tesseract的历史，其最早由HP实验室在1985年研发，10年后，也就
     //指定使用简体中文
     tesseract -l chi_sim imgName result
     
+    //安装图形预处理工具
+    brew reinstall opencv3 --with-java
+    brew info opencv3
     
+```
+
+```aidl 
+
+#下载对应版本的源码 opencv-330.jar
+#unzip opencv;
+#mkdir build
+#cd build
+#cmake -D BUILD_SHARED_LIBS=OFF ../
+#make
+
+mvn install:install-file \
+-Dfile=/Users/moyong/project/env-myopensource/1-spring/12-spring/fast-api/d-api/app-consuming-rest/libs/opencv-330.jar \
+-DgroupId=net.sourceforge.opencv  \
+-DartifactId=opencv-java-3.3.0  \
+-Dversion=3.3.0 \
+-Dpackaging=jar
+
+<dependency>
+        <groupId>org.opencv</groupId>
+        <artifactId>opencv</artifactId>
+        <version>3.3.0</version>
+        <systemPath>/Users/moyong/project/env-myopensource/1-spring/12-spring/fast-api/d-api/app-consuming-rest/libs/opencv-330.jar</systemPath>
+        <scope>system</scope>
+</dependency>
 
 ```
 
